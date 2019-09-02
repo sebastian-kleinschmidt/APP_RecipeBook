@@ -4,6 +4,7 @@
 <button class="btn btn-success"> New Recipe </button>
 </div>
 </div>
+<hr>
 <div class="row">
 <div class="col-xs-12">
 <a href="#" class="list-group-item clearfix" *ngFor="let crecipe of recipes; let i = index">
@@ -12,8 +13,9 @@
   <p class="list-group-item-text">{{ crecipe.description }}</p>
 </div>
 <span class="pull-right">
-  <img src="{{ crecipe.imagePath }}" alt="" class="img-responsive" style="max-height: 50px;">
+  <img src="{{ crecipe.imagePath }}" alt="{{ crecipe.name }}" class="img-responsive" style="max-height: 50px;">
 </span>
 </a>
 </div>
 </div>
+<app-recipe-item></app-recipe-item>
