@@ -8,9 +8,13 @@ import { Ingredient } from '../shared/ingredient.model'
 })
 export class ShoppingListComponent implements OnInit {
 
-  ingredients: Ingredient[] = [new Ingredient('Tomato',10), new Ingredient('Potatoe',15)];
+  ingredients: Ingredient[] = [new Ingredient('Tomato', 10), new Ingredient('Potatoe', 15)];
 
   constructor() { }
+
+  addIngredient(newIngridient: Ingredient) {
+    this.ingredients.push(newIngridient);
+  }
 
   ngOnInit() {
   }
